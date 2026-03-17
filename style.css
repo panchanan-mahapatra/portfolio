@@ -179,12 +179,13 @@ h2.section-title::after {
 }
 
 .hero-title {
-    font-size: 4.5rem;
+    font-size: 4rem;
     line-height: 1.2;
     margin-bottom: 24px;
     letter-spacing: -1.5px;
     color: var(--primary-color);
-    min-height: 110px; /* Prevents layout shift when text changes */
+    min-height: 110px;
+    /* Prevents layout shift when text changes */
     display: flex;
     align-items: center;
 }
@@ -434,7 +435,8 @@ h2.section-title::after {
     align-items: center;
     gap: 24px;
     margin-bottom: 16px;
-    flex-wrap: wrap; /* Allows email and phone to stack on very small screens */
+    flex-wrap: wrap;
+    /* Allows email and phone to stack on very small screens */
 }
 
 .contact-link {
@@ -448,7 +450,8 @@ h2.section-title::after {
 
 .contact-link:hover {
     color: var(--secondary-color);
-    transform: translateY(-2px); /* Add a subtle lift effect */
+    transform: translateY(-2px);
+    /* Add a subtle lift effect */
 }
 
 .separator {
@@ -469,19 +472,34 @@ h2.section-title::after {
 }
 
 /* Responsive Design */
-@media (max-width: 992px) {
+@media (max-width: 1100px) {
+    .hero-title {
+        font-size: 3.2rem;
+    }
+    .hero-image {
+        flex: 0 0 300px;
+    }
     .hero-content {
-        flex-direction: column-reverse;
+        gap: 40px;
+    }
+}
+
+@media (max-width: 900px) {
+    .hero-content {
+        flex-direction: column;
         text-align: center;
         padding: 40px 0;
     }
 
     .hero-image {
         max-width: 280px;
+        margin: 0 auto;
     }
 
     .hero-title {
-        font-size: 3.5rem;
+        font-size: 3rem;
+        min-height: auto;
+        justify-content: center;
     }
 
     .hero-subtitle {
